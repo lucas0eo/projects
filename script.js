@@ -50,7 +50,7 @@ const getRepos = async () => {
     let res;
     for (let i = 1; i <= maxPages; i++) {
         res = await fetch(
-            `https://api.github.com/users/${username}/repos?&sort=pushed&per_page=100&page=${i}`
+            `https://api.github.com/users/lucas0eo/repos?&sort=pushed&per_page=100&page=${i}`
             // {
             //     headers: {
             //         Accept: 'application/vnd.github+json',
@@ -70,7 +70,7 @@ getRepos();
 
 // display list of all user's public repos
 const displayRepos = (repos) => {
-    const userHome = `https://github.com/${username}`;
+    const userHome = `https://github.com/lucas0eo`;
     filterInput.classList.remove('hide');
     for (const repo of repos) {
         if (repo.fork && hideForks) {
